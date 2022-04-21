@@ -1,11 +1,11 @@
-SparkFun MicroPressure Arduino Library
+MicroPressure Arduino Library
 ========================================
 
 <img src="https://cdn.sparkfun.com/assets/parts/1/5/3/4/0/16476-SparkFun_Qwiic_MicroPressure_Sensor-01.jpg" alt="SparkFun Qwiic MicroPressure Sensor Library" style="max-width:50%"/>
 
 [*SEN-16476*](https://www.sparkfun.com/products/16476)
 
-This library is used for interfacing the *SparkFun Qwiic MicroPressure Sensor* board.  This board runs at 3.3V. *Level shifting is needed if you are not using a 3.3V device to communicate with it*.
+This library is used for interfacing the Honeywell micropressure dev boards and *SparkFun Qwiic MicroPressure Sensor* board.  This board runs at 3.3V. *Level shifting is needed if you are not using a 3.3V device to communicate with it*.
 
 Repository Contents
 -------------------
@@ -21,7 +21,7 @@ Documentation
 --------------
 
 * **[Installing an Arduino Library Guide](https://learn.sparkfun.com/tutorials/installing-an-arduino-library)** - Basic information on how to install an Arduino library.
-* **[Product Repository](https://github.com/sparkfun/MicroPressure_Sensor)** - Main repository (including hardware files) for the SparkFun Qwiic MicroPressure Sensor board.
+* **[Product Repository](https://github.com/nightsbird/MicroPressure_Sensor)** - Main repository (including hardware files) for the SparkFun Qwiic MicroPressure Sensor board.
 * **[Hookup Guide](https://learn.sparkfun.com/tutorials/sparkfun-qwiic-micropressure-hookup-guide)** - Basic hookup guide for the SparkFun Qwiic MicroPressure Sensor.
 
 Products that use this Library
