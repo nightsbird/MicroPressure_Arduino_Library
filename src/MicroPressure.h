@@ -7,6 +7,7 @@
 #include <Wire.h>
 
 #define DEFAULT_ADDRESS 0x18
+#define DEFAULT_TYPE 	1
 #define MAXIMUM_PSI     25
 #define MINIMUM_PSI     0
 
@@ -30,8 +31,16 @@ enum Pressure_Units {
 class MicroPressure
 {
   public:
-    MicroPressure(int8_t eoc_pin=-1, int8_t rst_pin=-1, uint8_t minimumPSI=MINIMUM_PSI, uint8_t maximumPSI=MAXIMUM_PSI);
-    bool begin(uint8_t deviceAddress = DEFAULT_ADDRESS, TwoWire &wirePort = Wire);
+    MicroPressure(int8_t eoc_pin=-1, int8_t rst_pin=-1, uint8_t minimumPSI=MINIMUM_PSI, uint8_t maximumPSI=MAXIMUM_PSI, uint8_t DEVICE_ADDRESS=DEFAULT_ADDRESS, unint8_t DEVICE_TYPE=DEFAULT_TYPE);
+    if(DEFAULT_TYPE == 1){
+	    OUTPUT_MAX=0xE66666;
+	    OUTPUT_MIN=0x19999A;
+    }else if(DEFAULT_TYPE == 2){
+	    OUTPUT_MAX=0x39999A;
+	    OUTPUT_MIN=0x66666;
+    }
+
+    bool begin(uint8_t deviceAddress = DEVICE_ADDRESS, TwoWire &wirePort = Wire);
     uint8_t readStatus(void);
     float readPressure(Pressure_Units units=PSI);
     
