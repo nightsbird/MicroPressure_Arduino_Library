@@ -1,5 +1,5 @@
 /*
-  Basic test of the Qwiic MicroPressure Sensor
+  Basic test of the Honeywell MicroPressure Sensor
   By: Alex Wende
   SparkFun Electronics
   Date: July 2020
@@ -14,7 +14,7 @@
 // Click here to get the library: http://librarymanager/All#SparkFun_MicroPressure
 
 #include<Wire.h>
-#include <SparkFun_MicroPressure.h>
+#include <MicroPressure.h>
 
 /*
  * Initialize Constructor
@@ -23,9 +23,11 @@
  *  - RST_PIN: Reset (defualt: -1)
  *  - MIN_PSI: Minimum Pressure (default: 0 PSI)
  *  - MAX_PSI: Maximum Pressure (default: 25 PSI)
+ *  - OUTPUT_MIN: minimum range calibration (hex of min percent of 2^24). Default:  0x66666
+ *  - OUTPUT_MAX: maximum range calibration (hex of max percent of 2^24). Default:  0x39999A
  */
-//SparkFun_MicroPressure mpr(EOC_PIN, RST_PIN, MIN_PSI, MAX_PSI);
-SparkFun_MicroPressure mpr; // Use default values with reset and EOC pins unused
+//MicroPressure mpr(EOC_PIN, RST_PIN, MIN_PSI, MAX_PSI);
+MicroPressure mpr; // Use default values with reset and EOC pins unused
 
 void setup() {
   // Initalize UART, I2C bus, and connect to the micropressure sensor
