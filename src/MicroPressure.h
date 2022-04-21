@@ -38,6 +38,9 @@ class MicroPressure
     }else if(DEFAULT_TYPE == 2){
 	    OUTPUT_MAX=0x39999A;
 	    OUTPUT_MIN=0x66666;
+    }else if(DEFAULT_TYPE == 3){
+	    OUTPUT_MAX=0xCCCCCD;
+	    OUTPUT_MIN=0x333333;
     }
 
     bool begin(uint8_t deviceAddress = DEVICE_ADDRESS, TwoWire &wirePort = Wire);
