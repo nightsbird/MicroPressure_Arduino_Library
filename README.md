@@ -1,7 +1,7 @@
 MicroPressure Arduino Library
 ========================================
 
-https://sps.honeywell.com/us/en/products/advanced-sensing-technologies/healthcare-sensing/board-mount-pressure-sensors/micropressure-mpr-series
+<a href="https://sps.honeywell.com/us/en/products/advanced-sensing-technologies/healthcare-sensing/board-mount-pressure-sensors/micropressure-mpr-series">Honeywell MPR Pressure Sensors</a>
 
 [*SEN-16476*](https://www.sparkfun.com/products/16476)
 
@@ -27,7 +27,7 @@ Documentation
 Products that use this Library
 ---------------------------------
 
-https://sps.honeywell.com/us/en/products/advanced-sensing-technologies/healthcare-sensing/board-mount-pressure-sensors/micropressure-mpr-series
+<a href="https://sps.honeywell.com/us/en/products/advanced-sensing-technologies/healthcare-sensing/board-mount-pressure-sensors/micropressure-mpr-series">Honeywell MPR Pressure Sensors</a>
 
 * [SEN-16476](https://www.sparkfun.com/products/16476) - SparkFun Qwiic MicroPressure Sensor
 
