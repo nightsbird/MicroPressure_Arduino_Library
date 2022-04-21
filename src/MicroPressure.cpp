@@ -1,7 +1,7 @@
 /*
   This is a library for the Honeywell MicroPressure Sensor, which can read from 0 to 300mmHg.
-  By: Alex Wende
-  Date: July 2020 
+  By: Jeffrey Dunbar
+  Date: April 2022 
   License: This code is public domain but you buy me a beer if you use this and 
   we meet someday (Beerware license).
   Feel like supporting our work? Buy a board from SparkFun!
@@ -14,15 +14,18 @@
    - (Optional) rst_pin, Reset pin for MPR sensor. Default: -1 (skip)
    - minimumPSI, minimum range value of the sensor (in PSI). Default: 0
    - maximumPSI, maximum range value of the sensor (in pSI). Default: 25
-   - OUTPUT_MIN, minimum range calibration (hex of min percent of 2^24). Default:  0x66666
-   - OUTPUT_MAX, maximum range calibration (hex of max percent of 2^24). Default:  0x39999A
+   - deviceTYPE 1 = OUTPUT_MIN, minimum range calibration (hex of 10 percent of 2^24). Default:  0x19999A;OUTPUT_MAX, maximum range calibration (hex of 90 percent of 2^24). Default:  0xE66666
+   - deviceTYPE 2 = OUTPUT_MIN, minimum range calibration (hex of 2.5 percent of 2^24). Default:  0x66666;OUTPUT_MAX, maximum range calibration (hex of 22.5 percent of 2^24). Default:  0x39999A
+   - deviceTYPE 3 = OUTPUT_MIN, minimum range calibration (hex of 20 percent of 2^24). Default:  0x333333;OUTPUT_MAX, maximum range calibration (hex of 80 percent of 2^24). Default:  0xCCCCCD
 */
-MicroPressure::MicroPressure(int8_t eoc_pin, int8_t rst_pin, uint8_t minimumPSI, uint8_t maximumPSI)
+MicroPressure::MicroPressure(int8_t eoc_pin, int8_t rst_pin, uint8_t minimumPSI, uint8_t maximumPSI, uint8_t deviceADDRESS, unit8_t deviceTYPE)
 {
   _eoc = eoc_pin;
   _rst = rst_pin;
   _minPsi = minimumPSI;
   _maxPsi = maximumPSI;
+  _devADDr = deviceADDRESS;
+  _devTyp = deviceTYPE;	
 }
 
 /* Initialize hardware
